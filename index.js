@@ -2,7 +2,7 @@
   const fs = require("fs");
   var requests = require("requests")
   const homeFile =fs.readFileSync("index.html","utf-8");
-   const port=5001;
+   const port=5000;
 
   const replaceVal = (tempVal,orgVal)=>{
     let temperature =tempVal.replace("{%tempval%}",orgVal.main.temp)
