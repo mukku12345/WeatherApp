@@ -2,6 +2,7 @@
   const fs = require("fs");
   var requests = require("requests")
   const homeFile =fs.readFileSync("home.html","utf-8");
+   const port=5001;
 
   const replaceVal = (tempVal,orgVal)=>{
     let temperature =tempVal.replace("{%tempval%}",orgVal.main.temp)
@@ -38,4 +39,4 @@
         })
     } 
  })
- server.listen(5001,"127.0.0.1");
+ server.listen(port,"127.0.0.1");
